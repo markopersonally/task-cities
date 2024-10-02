@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Cites from "./cites";
+import Cites from "./Cities";
 
 interface City {
   id: string;
@@ -21,6 +21,7 @@ export default function ContainerList() {
       })
       .then((data) => {
         setCities(data);
+        console.log(data)
       });
   }, []);
 
