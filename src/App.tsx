@@ -1,9 +1,9 @@
-import ContainerList from "./components/ContainerList";
+import CountrySearch from "./components/CountrySearch";
 
 export default function App() {
   return (
     <>
-      <ContainerList />
+      <CountrySearch />
     </>
   );
 }
