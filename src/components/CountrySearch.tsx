@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { URL } from "../data/data";
 
 interface Country {
   name: {
@@ -21,7 +20,7 @@ export default function CountrySearch() {
   useEffect(() => {
     const fetchCountries = async () => {
       try {
-        const res = await URL;
+        const res = await fetch("https://restcountries.com/v3.1/all");
         if (!res.ok) throw new Error("Failed to fetch countries");
 
         const data: Country[] = await res.json();
